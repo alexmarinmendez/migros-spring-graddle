@@ -2,6 +2,7 @@ package edu.cibertec.migros.persistence.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import java.util.List;
 
 import java.time.LocalDateTime;
 
@@ -33,4 +34,7 @@ public class Compra {
     @ManyToOne
     @JoinColumn(name="id_cliente", insertable = false, updatable = false)
     private Cliente cliente;
+
+    @OneToMany(mappedBy = "compra")
+    private List<ComprasProducto> productos;
 }

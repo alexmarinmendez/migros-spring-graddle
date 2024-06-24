@@ -1,8 +1,6 @@
 package edu.cibertec.migros.persistence.entity;
 
-import jakarta.persistence.EmbeddedId;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
@@ -24,5 +22,9 @@ public class ComprasProducto {
     private Double total;
 
     private Boolean estado;
+
+    @ManyToOne
+    @JoinColumn(name="id_compra", insertable = false, updatable = false)
+    private Compra compra;
 
 }
