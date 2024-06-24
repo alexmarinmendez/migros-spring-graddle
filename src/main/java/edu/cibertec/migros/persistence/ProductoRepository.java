@@ -12,6 +12,6 @@ public class ProductoRepository {
     }
 
     public List<Producto> getByCategoria(Long idCategoria) {
-        return productoCrudRepository.findByIdCategoria(idCategoria);
+        return productoCrudRepository.findByIdCategoriaOrderByNombreAsc(idCategoria);
     }
 }
