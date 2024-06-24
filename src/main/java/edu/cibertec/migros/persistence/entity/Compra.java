@@ -11,10 +11,10 @@ public class Compra {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_compra")
-    private int idCompra;
+    private Integer idCompra;
 
     @Column(name="id_cliente")
-    private int idCliente;
+    private Integer idCliente;
 
     private LocalDateTime fecha;
 
@@ -24,19 +24,19 @@ public class Compra {
     private String comentario;
     private String estado;
 
-    public int getIdCompra() {
+    public Integer getIdCompra() {
         return idCompra;
     }
 
-    public void setIdCompra(int idCompra) {
+    public void setIdCompra(Integer idCompra) {
         this.idCompra = idCompra;
     }
 
-    public int getIdCliente() {
+    public Integer getIdCliente() {
         return idCliente;
     }
 
-    public void setIdCliente(int idCliente) {
+    public void setIdCliente(Integer idCliente) {
         this.idCliente = idCliente;
     }
 
